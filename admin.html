@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Admin Panel - Upload Video</h1>
+        <form method="POST" action="/admin">
+            <label for="title">Video Title:</label>
+            <input type="text" id="title" name="title" required>
+            <label for="url">Google Drive Link:</label>
+            <input type="text" id="url" name="url" required>
+            <button type="submit">Upload Video</button>
+        </form>
+        <a href="{{ url_for('main') }}">Back to Main</a>
+    </div>
+    <footer>
+        <p>Credits: Sandeep Kariyawasam</p>
+    </footer>
+</body>
+</html>

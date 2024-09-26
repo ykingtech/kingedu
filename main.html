@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Videos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Education Platform</h1>
+        <h2>Available Videos</h2>
+
+        <div class="video-list">
+            {% for video in videos %}
+                <div class="video-item">
+                    <h3>{{ video.title }}</h3>
+                    <iframe src="{{ video.url }}" width="640" height="480" allow="autoplay"></iframe>
+                    <p>Uploaded on: {{ video.date_uploaded.strftime("%Y-%m-%d") }}</p>
+                </div>
+            {% endfor %}
+        </div>
+        <a href="{{ url_for('logout') }}">Logout</a>
+    </div>
+
+    <footer>
+        <p>Credits: Sandeep Kariyawasam</p>
+    </footer>
+</body>
+</html>
+

@@ -1,0 +1,20 @@
+.video-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.video-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+iframe {
+    border: none;
+    width: 100%;
+    max-width: 640px;
+    height: 360px;
+}
